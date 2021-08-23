@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Swiper demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+      
+      /* Modal Content */
+      .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+      
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      </style>
+
+</head>
+
+<body>
+	<!-- Swiper -->
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><a class="popup_youtube" href="https://www.youtube.com/watch?v=juIJGBxj-4w"><img id="imgFace" src="img/pic2.jpg" alt="img"></a></div>
+			<div class="swiper-slide"><a class="popup_youtube" href="https://www.youtube.com/watch?v=WhY7uyc56ms"><img id="imgFace" src="img/pic1.jpg" alt="img"></a></div>
+			<div class="swiper-slide"><a class="popup_youtube" href="https://www.youtube.com/watch?v=LXb3EKWsInQ"><img id="imgFace" src="img/pic3.jpg" alt="img"></a></div>
+			<div class="swiper-slide"><a class="popup_youtube" href="https://www.youtube.com/watch?v=WhY7uyc56ms"><img id="imgFace" src="img/pic4.jpg" alt="img"></a></div>
+			<div class="swiper-slide"><a class="popup_youtube" href="https://www.youtube.com/watch?v=WhY7uyc56ms"><img id="imgFace" src="img/pic5.jpg" alt="img"></a></div>
+        </div>
+	</div>
+
+
+	<!-- Swiper JS -->
+	<script src="js/jquery.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+     $(document).ready(function() {
+      $('.popup_youtube').magnificPopup({
+        disableOn: 200,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+
+        fixedContentPos: false
+      });
+    });
+	var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,  
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 25,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows : true,
+      },
+      loop: true,
+    });
+
+	</script>
+</body>
+
+</html>
